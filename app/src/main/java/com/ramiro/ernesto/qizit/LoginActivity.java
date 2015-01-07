@@ -1,17 +1,35 @@
 package com.ramiro.ernesto.qizit;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class LoginActivity extends ActionBarActivity {
+
+   protected TextView mSignUpTextview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        mSignUpTextview = (TextView)findViewById(R.id.signup_text);
+        mSignUpTextview.setOnClickListener(new View.OnClickListener(){
+            @Override
+                    public void onClick(View v){
+                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+                startActivity(intent);
+
+
+            }
+        });
+
+
     }
 
 
