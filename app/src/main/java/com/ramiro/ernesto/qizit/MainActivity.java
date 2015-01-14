@@ -43,8 +43,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         setContentView(R.layout.activity_main);
 
         //shows icon in actionbar
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setIcon(R.drawable.ic_launcher);
+       //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setIcon(R.drawable.ic_launcher);
 
         Intent intent = new Intent(this,LoginActivity.class);
         //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
