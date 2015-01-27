@@ -16,6 +16,7 @@
     <TextView
         android:id="@+id/title"
         style="@style/AuthTitle"
+        android:layout_marginTop="180dp"
         />
 
     <TextView
@@ -24,13 +25,14 @@
 
     <LinearLayout
         android:id="@+id/keysLayout"
+        android:layout_width="400dp"
+        android:layout_centerHorizontal="true"
         style="@style/AuthFieldContainer">
 
         <EditText
             android:id="@+id/usernamefield"
             android:hint="@string/username_hint"
-            style="@style/AuthEditText"
-            >
+            style="@style/AuthEditText">
 
             <requestFocus/>
         </EditText>
@@ -40,7 +42,6 @@
             android:inputType="textPassword"
             android:hint="@string/password_hint"
             style="@style/AuthEditText"
-
             />
 
         </LinearLayout>
@@ -50,6 +51,8 @@
         android:id="@+id/loginbutton"
         android:text="@string/LoginButton_text"
         android:layout_below="@id/keysLayout"
+        android:layout_width="400dp"
+        android:layout_centerHorizontal="true"
         style="@style/AuthButton" />
 
 

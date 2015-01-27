@@ -2,8 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     style="@style/AuthBackground"
-    tools:context="com.ramiro.ernesto.qizit.UI.SignupActivity"
->
+    tools:context="com.ramiro.ernesto.qizit.UI.SignupActivity">
     <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
     <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
     <!--android:paddingTop="@dimen/activity_vertical_margin"-->
@@ -17,7 +16,9 @@
 
     <TextView
         android:id="@+id/title"
+        android:layout_marginTop="180dp"
         style="@style/AuthTitle"
+
         />
 
     <TextView
@@ -26,6 +27,8 @@
 
     <LinearLayout
         android:id="@+id/keysLayout"
+        android:layout_width="400dp"
+        android:layout_centerHorizontal="true"
         style="@style/AuthFieldContainer">
 
     <EditText
@@ -65,17 +68,19 @@
         android:id="@+id/signupbutton"
         android:text="@string/signup_button_label"
         android:layout_below="@+id/keysLayout"
-        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@id/keysLayout"
         android:layout_toLeftOf="@id/buttonDivider"
         android:layout_marginRight="0dp"
+        android:layout_marginLeft="0dp"
          style="@style/AuthButton"/>
 
     <Button
         android:id="@+id/cancelbutton"
         android:text="@string/cancel_button_label"
         android:layout_below="@+id/keysLayout"
-        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/keysLayout"
         android:layout_toRightOf="@id/buttonDivider"
+        android:layout_marginRight="0dp"
         android:layout_marginLeft="0dp"
         style="@style/AuthButton"
 

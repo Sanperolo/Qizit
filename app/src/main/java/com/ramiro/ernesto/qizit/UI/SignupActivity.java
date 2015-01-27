@@ -1,58 +1,43 @@
-package com.ramiro.ernesto.qizit;
+package com.ramiro.ernesto.qizit.UI;
 
-import android.app.ActionBar;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.Button;
+
+import com.ramiro.ernesto.qizit.R;
 
 
-public class LoginActivity extends ActionBarActivity {
+public class SignupActivity extends ActionBarActivity {
 
-   protected TextView mSignUpTextview;
+    protected Button mCancelButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signup);
 
         getSupportActionBar().hide();
 
-
-
-        mSignUpTextview = (TextView)findViewById(R.id.signup_text);
-        mSignUpTextview.setOnClickListener(new View.OnClickListener(){
+//        cancel button
+        mCancelButton = (Button)findViewById(R.id.cancelbutton);
+        mCancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
-                    public void onClick(View v){
-                Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
-                startActivity(intent);
-
+            public void onClick(View v) {
+             finish();
 
             }
         });
 
-
-
-
-
     }
-
-
-//    public void onClick (View textView){
-//        Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
-//        startActivity(intent);
-//
-//    }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_login, menu);
+        getMenuInflater().inflate(R.menu.menu_signup, menu);
         return true;
     }
 
