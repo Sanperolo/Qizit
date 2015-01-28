@@ -23,5 +23,6 @@
     <string name="empty_inbox_label">No new messages</string>
     <string name="title_activity_tocopy">tocopy</string>
     <string name="title_section3">Section 3</string>
+    <string name="empty_friends_message">Add friends to begin</string>
 
 </resources>
