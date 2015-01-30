@@ -16,7 +16,7 @@
     </style>
 
 
-        <!-- en @drawable/button_custom tenemos un XML con los selectores-->
+        <!-- en @drawable/button_custom tenemos un XML con los selectors-->
 
     <style name="AuthButton">
         <item name="android:layout_width">match_parent</item>
