@@ -4,12 +4,13 @@
     tools:context="com.ramiro.ernesto.qizit.UI.MainActivity$PlaceholderFragment">
 
 
-    <ListView
+    <GridView
+        android:id="@+id/friendsGrid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:id="@android:id/list" />
+         />
 
   <TextView
       android:id="@android:id/empty"

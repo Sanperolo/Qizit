@@ -3,20 +3,30 @@
 
     <style name="AppTheme" parent="@style/_AppTheme"/>
 
+
     <style name="_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="colorControlNormal">@color/contrastColor</item>
         <item name="colorControlActivated">@color/contrastColor</item>
-        <item name="colorControlHighlight">@color/contrastColor</item>
-        <item name="android:listViewStyle">@style/AppTheme.LightPurpleBackground</item>
-    <item name="android:gridViewStyle">@style/AppTheme.LightPurpleBackground</item>
+        <item name="android:listViewStyle">@style/LightPurpleBackground</item>
+        <item name="android:gridViewStyle">@style/LightPurpleBackground</item>
     </style>
 
-    <style name="AppTheme.LightPurpleBackground">
+    <style name="LightPurpleBackground">
 <item name="android:background">@color/light_purple_background</item>
     </style>
 
 
-    <!--<item name="android:editTextBackground">@drawable/apptheme_edit_text_holo_light</item>-->
+        <!-- en @drawable/button_custom tenemos un XML con los selectores-->
+
+    <style name="AuthButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/button_custom</item>
+        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
 
 
     <style name="AuthBackground">
@@ -80,14 +90,6 @@
 
     </style>
 
-    <style name="AuthButton">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@drawable/button_custom</item>
-        <item name="android:layout_marginLeft">@dimen/activity_horizontal_margin</item>
-        <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
-        <item name="android:textSize">13sp</item>
-        <item name="android:textColor">@color/textColor</item>
-    </style>
+
 
 </resources>

@@ -1,0 +1,72 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/AuthBackground"
+    tools:context="com.ramiro.ernesto.qizit.UI.LoginActivity">
+    <!--android:background="@drawable/background_fill"-->
+
+
+    <ImageView
+        android:id="@+id/backgroundImage"
+        style="@style/AuthBackgroundImage" />
+
+
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/AuthTitle"
+        android:layout_marginTop="180dp"
+        />
+
+    <TextView
+        android:id="@+id/subtitle"
+        style="@style/AuthSubtitle" />
+
+    <LinearLayout
+        android:id="@+id/keysLayout"
+        android:layout_width="400dp"
+        android:layout_centerHorizontal="true"
+        style="@style/AuthFieldContainer">
+
+        <EditText
+            android:id="@+id/usernamefield"
+            android:hint="@string/username_hint"
+            style="@style/AuthEditText">
+
+            <requestFocus/>
+        </EditText>
+
+        <EditText
+            android:id="@+id/passwordfield"
+            android:inputType="textPassword"
+            android:hint="@string/password_hint"
+            style="@style/AuthEditText"
+            />
+
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:text="@string/LoginButton_text"
+        android:layout_below="@id/keysLayout"
+        android:layout_width="400dp"
+        android:layout_centerHorizontal="true"
+        style="@style/AuthButton" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup_text"
+        android:text="@string/signup_text"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/loginbutton"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        />
+    <!--android:onClick="onClick"-->
+    <!--android:clickable="true"-->
+
+</RelativeLayout>
