@@ -9,7 +9,13 @@
         <item name="colorControlActivated">@color/contrastColor</item>
         <item name="android:listViewStyle">@style/LightPurpleBackground</item>
         <item name="android:gridViewStyle">@style/LightPurpleBackground</item>
+        <item name="android:actionOverflowButtonStyle">@style/AppTheme.OverFlow</item>
     </style>
+
+    <style name="AppTheme.OverFlow" parent="android:style/Widget.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_menu_overflow</item>
+    </style>
+
 
     <style name="LightPurpleBackground">
 <item name="android:background">@color/light_purple_background</item>

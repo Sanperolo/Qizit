@@ -3,6 +3,8 @@ package com.ramiro.ernesto.qizit.UI;
 import java.util.Locale;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
@@ -45,6 +47,10 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         //shows i con in actionbar
        getSupportActionBar().setDisplayShowHomeEnabled(true);
        getSupportActionBar().setIcon(R.drawable.ic_launcher);
+       getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(130,130,130)));
+        getSupportActionBar().setStackedBackgroundDrawable(new ColorDrawable(Color.rgb(85,55,124)));
+
+
 
         Intent intent = new Intent(this,LoginActivity.class);
         //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
