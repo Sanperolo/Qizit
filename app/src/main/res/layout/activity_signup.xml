@@ -30,7 +30,8 @@
     <EditText
         android:id="@+id/usernamefield"
         android:hint="@string/username_hint"
-        style="@style/AuthEditText">
+        style="@style/AuthEditText"
+        tools:focusable="false">
         <requestFocus/>
     </EditText>
 
@@ -46,6 +47,7 @@
     <EditText
         android:id="@+id/emailfield"
          android:hint="@string/email_hint"
+        android:inputType="textEmailAddress"
         style="@style/AuthEditText"
          />
 
