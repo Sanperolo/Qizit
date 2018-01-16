@@ -21,5 +21,8 @@
     <string name="subtitle_string">UEM handycrafted</string>
     <string name="cancel_button_label">CANCEL</string>
     <string name="buttonDivider">Button divider</string>
+    <string name="newuhint">Username</string>
+    <string name="mykey">myvalue</string>
+    <string name="frogback">the frog</string>
 
 </resources>

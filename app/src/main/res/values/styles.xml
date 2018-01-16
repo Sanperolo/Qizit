@@ -22,7 +22,7 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_alignParentLeft">true</item>
         <item name="android:layout_alignParentTop">true</item>
-        <item name="android:scaleType">fitStart</item>
+        <item name="android:scaleType">centerCrop</item>
         <item name="android:contentDescription">@string/backimage_description</item>
     </style>
 
