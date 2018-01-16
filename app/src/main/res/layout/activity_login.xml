@@ -34,10 +34,10 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="email"
+                android:hint="email here"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:singleLine="true" />
+                android:textColorHint="@color/abc_search_url_text_normal" />
 
         </android.support.design.widget.TextInputLayout>
 
@@ -50,31 +50,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="password"
-                android:imeActionId="@+id/loginbutton"
-                android:imeActionLabel="action_sign_in_short"
+                android:imeActionId="666"
+                android:imeActionLabel="Custom"
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
                 android:maxLines="1"
-                android:singleLine="true" />
+                />
 
         </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/usernamefield"
-            android:hint="@string/username_hint"
-            style="@style/AuthEditText">
-
-            <requestFocus/>
-        </EditText>
-
-        <EditText
-            android:id="@+id/passwordfield"
-            android:inputType="textPassword"
-            android:hint="@string/password_hint"
-            style="@style/AuthEditText"
-            />
-
-        </LinearLayout>
+    </LinearLayout>
 
 
     <Button
