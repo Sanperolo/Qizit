@@ -19,13 +19,16 @@
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
+
         </activity>
         <activity
             android:name=".SignupActivity"
             android:label="@string/title_activity_signup"
             android:parentActivityName=".LoginActivity"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
+
         </activity>
 
     </application>

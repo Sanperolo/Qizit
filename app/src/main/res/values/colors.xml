@@ -7,6 +7,6 @@
     <color name="pressed_purple_button">#BA9DDA</color>
     <color name="focused_purple_button">#D6C3ED</color>
     <color name="textColor">#351757</color>
-    <color name="contrastColor">#FFC700</color>
+    <color name="contrastColor">#ffc700</color>
 
 </resources>

@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/AuthBackground"
-    tools:context="com.ramiro.ernesto.qizit.SignupActivity">
+    tools:context="com.ramiro.ernesto.qizit.SignupActivity"
+    android:background="@drawable/background_fill">
     <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
     <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
     <!--android:paddingTop="@dimen/activity_vertical_margin"-->
@@ -10,28 +10,59 @@
 
     <ImageView
         android:id="@+id/backgroundImage"
-        style="@style/AuthBackgroundImage" />
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/backimage_description"
+        android:scaleType="fitStart"
+        android:background="@drawable/background"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true" />
 
 
 
     <TextView
         android:id="@+id/title"
-        style="@style/AuthTitle"
-        />
+        android:text="@string/app_name"
+        style="@style/MyTextView" />
 
     <TextView
         android:id="@+id/subtitle"
-        style="@style/AuthSubtitle" />
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@id/title"
+        android:text="@string/subtitle_string"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="0dp" />
 
     <LinearLayout
         android:id="@+id/keysLayout"
-        style="@style/AuthFieldContainer">
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitle"
+        android:paddingLeft="@dimen/login_horizontal_padding"
+        android:paddingTop="@dimen/login_vertical_padding"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/login_vertical_padding"
+        android:layout_marginTop="@dimen/login_vertical_margin"
+        android:paddingRight="@dimen/login_horizontal_padding">
 
     <EditText
         android:id="@+id/usernamefield"
         android:hint="@string/username_hint"
-        style="@style/AuthEditText"
-        tools:focusable="false">
+        tools:focusable="false"
+        android:layout_alignParentLeft="true"
+        android:textSize="17sp"
+        android:textColorHint="@color/light_grey"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subtitle"
+        android:layout_width="match_parent">
         <requestFocus/>
     </EditText>
 
@@ -40,16 +71,24 @@
         android:id="@+id/passwordfield"
         android:hint="@string/password_hint"
         android:inputType="textPassword"
-        style="@style/AuthEditText"
 
-/>
+        android:layout_alignParentLeft="true"
+        android:textSize="17sp"
+        android:textColorHint="@color/light_grey"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subtitle"
+        android:layout_width="match_parent" />
 
     <EditText
         android:id="@+id/emailfield"
          android:hint="@string/email_hint"
         android:inputType="textEmailAddress"
-        style="@style/AuthEditText"
-         />
+        android:layout_alignParentLeft="true"
+        android:textSize="17sp"
+        android:textColorHint="@color/light_grey"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subtitle"
+        android:layout_width="match_parent" />
 
     </LinearLayout>
 
@@ -69,7 +108,12 @@
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@id/buttonDivider"
         android:layout_marginRight="0dp"
-         style="@style/AuthButton"/>
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="13sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/button_custom"
+        android:textColor="@color/textColor" />
 
     <Button
         android:id="@+id/cancelbutton"
@@ -78,7 +122,11 @@
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@id/buttonDivider"
         android:layout_marginLeft="0dp"
-        style="@style/AuthButton"
 
- />
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textSize="13sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/button_custom"
+        android:textColor="@color/textColor" />
 </RelativeLayout>

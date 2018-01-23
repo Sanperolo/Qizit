@@ -7,13 +7,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class LoginActivity extends ActionBarActivity {
 
-   protected TextView mSignUpTextview;
+   private TextView mSignUpTextview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +23,9 @@ public class LoginActivity extends ActionBarActivity {
 
         getSupportActionBar().hide();
 
-
+        EditText password = (EditText)findViewById(R.id.passwordfield);
+        password.setFocusableInTouchMode(true);
+        password.requestFocus();
 
         mSignUpTextview = (TextView)findViewById(R.id.signup_text);
         mSignUpTextview.setOnClickListener(new View.OnClickListener(){

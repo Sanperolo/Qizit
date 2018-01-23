@@ -1,38 +1,74 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/AuthBackground"
-    tools:context="com.ramiro.ernesto.qizit.LoginActivity">
-    <!--android:background="@drawable/background_fill"-->
+    tools:context="com.ramiro.ernesto.qizit.LoginActivity"
+     android:background="@color/background_purple"
+    >
 
 
     <ImageView
         android:id="@+id/backgroundImage"
-        style="@style/AuthBackgroundImage" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitStart"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/backimage_description"
+        android:src="@drawable/background"
+         />
 
 
 
     <TextView
         android:id="@+id/title"
-        style="@style/AuthTitle"
-        />
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:id="@+id/subtitle"
-        style="@style/AuthSubtitle" />
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_below="@id/title"
+        android:text="@string/subtitle_string"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        />
 
     <LinearLayout
         android:id="@+id/keysLayout"
-        style="@style/AuthFieldContainer">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitle"
 
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/login_vertical_margin"
+
+        android:padding="@dimen/login_vertical_padding"
+
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:alpha="1"
+        >
 
 
         <EditText
             android:id="@+id/usernamefield"
             android:hint="@string/username_hint"
-            style="@style/AuthEditText">
-
+            android:textSize="17sp"
+            android:textColorHint="@color/light_grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
 
         </EditText>
 
@@ -40,9 +76,12 @@
             android:id="@+id/passwordfield"
             android:inputType="textPassword"
             android:hint="@string/password_hint"
-            style="@style/AuthEditText"
+            android:textSize="17sp"
+            android:textColorHint="@color/light_grey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             >
-        <requestFocus/>
+
         </EditText>
 
     </LinearLayout>
@@ -52,7 +91,14 @@
         android:id="@+id/loginbutton"
         android:text="@string/LoginButton_text"
         android:layout_below="@id/keysLayout"
-        style="@style/AuthButton" />
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:textSize="13sp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@drawable/button_custom"
+        android:textColor="@color/textColor" />
+
 
 
     <TextView
@@ -68,4 +114,7 @@
     <!--android:onClick="onClick"-->
     <!--android:clickable="true"-->
 
+
+
 </RelativeLayout>
+

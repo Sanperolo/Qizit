@@ -18,6 +18,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.R.attr.duration;
+import static android.R.attr.text;
 
 
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
@@ -103,6 +107,9 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Toast toast = Toast.makeText(this, "clicked", Toast.LENGTH_SHORT);
+//            toast.setGravity(Gravity.BOTTOM|Gravity.CENTER_HORIZONTAL, 50, 50);
+            toast.show();
             return true;
         }
 
