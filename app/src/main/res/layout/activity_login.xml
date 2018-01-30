@@ -2,21 +2,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/AuthBackground"
+    android:background="@android:color/holo_orange_dark"
     tools:context="com.ramiro.ernesto.qizit.LoginActivity">
     <!--android:background="@drawable/background_fill"-->
 
 
     <ImageView
         android:id="@+id/backgroundImage"
-        style="@style/AuthBackgroundImage" />
+        android:src="@drawable/girl"
+        android:scaleType="fitStart"
+        android:layout_alignParentLeft="true"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/backimage_description"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="-50dp" />
 
 
 
     <TextView
         android:id="@+id/title"
         style="@style/AuthTitle"
-        />
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:id="@+id/subtitle"
@@ -24,17 +32,19 @@
 
     <LinearLayout
         android:id="@+id/keysLayout"
-        style="@style/AuthFieldContainer">
+        style="@style/AuthFieldContainer"
+        android:layout_marginTop="10dp">
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/usernameTIL">
 
             <AutoCompleteTextView
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="email here"
+                android:hint="@string/username_hint"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textColorHint="@color/abc_search_url_text_normal" />
@@ -43,7 +53,8 @@
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/passwordTIL">
 
             <EditText
                 android:id="@+id/password"
