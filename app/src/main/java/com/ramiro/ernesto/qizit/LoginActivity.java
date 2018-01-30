@@ -3,10 +3,12 @@ package com.ramiro.ernesto.qizit;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +16,7 @@ import android.widget.Toast;
 public class LoginActivity extends ActionBarActivity {
 
    protected TextView mSignUpTextview;
+    protected TextInputLayout mUsername;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,9 @@ public class LoginActivity extends ActionBarActivity {
 
         getSupportActionBar().hide();
 
+
+//        mUsername = (TextInputLayout)findViewById(R.id.passwordTIL);
+//        mUsername.requestFocus();
 
 
         mSignUpTextview = (TextView)findViewById(R.id.signup_text);

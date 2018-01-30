@@ -41,7 +41,7 @@
         android:textColor="@android:color/white"
         android:layout_below="@+id/Title"
         android:layout_centerHorizontal="true"
-        android:textSize="30sp" />
+        android:textSize="40sp" />
 
 
 </RelativeLayout>

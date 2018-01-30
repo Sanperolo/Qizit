@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/AuthBackground"
+    android:background="@android:color/holo_orange_dark"
     tools:context="com.ramiro.ernesto.qizit.SignupActivity">
     <!--android:paddingLeft="@dimen/activity_horizontal_margin"-->
     <!--android:paddingRight="@dimen/activity_horizontal_margin"-->
@@ -10,7 +10,13 @@
 
     <ImageView
         android:id="@+id/backgroundImage"
-        style="@style/AuthBackgroundImage" />
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/hipman"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/backimage_description"
+        android:scaleType="fitStart"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true" />
 
 
 

@@ -9,7 +9,13 @@
 
     <ImageView
         android:id="@+id/backgroundImage"
-        style="@style/AuthBackgroundImage" />
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/background"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/backimage_description"
+        android:scaleType="centerCrop"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true" />
 
 
 

@@ -47,7 +47,7 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
 //        getSupportActionBar().setDisplayShowHomeEnabled(true);
 //        getsupportActionBar.setIcon(R.drawable.ic_launcher);
 
-        Intent intent = new Intent(this,LoginActivity.class);
+        Intent intent = new Intent(this,SplashActivity.class);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
