@@ -10,7 +10,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class SplashActivity extends AppCompatActivity {
+import static android.R.attr.animation;
+
+public class SplashActivity extends AppCompatActivity implements Animation.AnimationListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,24 +37,40 @@ public class SplashActivity extends AppCompatActivity {
         myImage.startAnimation(myanim);
         myTitle.startAnimation(myanim2);
 
-        openApp(true);
+        myanim2.setAnimationListener(this);
+
+//        openApp(true);
+    }
+    public void onAnimationStart(Animation animation) {
+
     }
 
+    public void onAnimationEnd(Animation animation) {
+            Intent intent = new Intent(SplashActivity.this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
-
-    private void openApp(boolean locationPermission) {
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Intent intent = new Intent(SplashActivity
-                        .this, LoginActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        }, 5000);
-    }
-
+    @Override
+    public void onAnimationRepeat(Animation animation) {
 
     }
+}
+
+//
+//    private void openApp(boolean locationPermission) {
+//        Handler handler = new Handler();
+//        handler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                Intent intent = new Intent(SplashActivity
+//                        .this, LoginActivity.class);
+//                startActivity(intent);
+//                finish();
+//            }
+//        }, 5000);
+//    }
+
+
+
 

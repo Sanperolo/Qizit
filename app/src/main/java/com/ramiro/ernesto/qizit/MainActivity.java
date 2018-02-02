@@ -18,10 +18,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.R.attr.duration;
 
 
 /**
- * @author ernesto 
+ * @author ernesto
  */
 public class MainActivity extends ActionBarActivity implements ActionBar.TabListener {
 
@@ -108,6 +111,10 @@ public class MainActivity extends ActionBarActivity implements ActionBar.TabList
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if (id == R.id.camera) {
+            Toast toast = Toast.makeText(this,"going camera", Toast.LENGTH_LONG );
+            toast.show();
         }
 
         return super.onOptionsItemSelected(item);
