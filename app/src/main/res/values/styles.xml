@@ -1,7 +1,7 @@
 <resources>
 
 
-    <style name="AppTheme" parent="@style/_AppTheme"/>
+    <style name="OtherAppTheme" parent="@style/_AppTheme"/>
 
     <style name="_AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
 
@@ -70,6 +70,12 @@
         <item name="android:layout_marginRight">@dimen/activity_horizontal_margin</item>
         <item name="android:textSize">13sp</item>
         <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <style name="MyStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/text_margin</item>
     </style>
 
 </resources>
