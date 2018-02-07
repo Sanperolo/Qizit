@@ -10,12 +10,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ramiro.ernesto.qizit.MainContextActivity">
 
-    <TextView
-        android:text="Tap for Context Menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="219dp"
-        android:id="@+id/textView" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myswipe">
+
+        <TextView
+            android:text="long tap for Context Menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/textView"
+            android:textSize="24sp"
+            />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
 </RelativeLayout>

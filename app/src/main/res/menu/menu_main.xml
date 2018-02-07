@@ -2,11 +2,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.ramiro.ernesto.qizit.MainActivity">
-    <item android:title="Item"
+    <item
+        android:title="Camera"
         android:id="@+id/camera"
         android:icon="@drawable/ic_menu_camera_white"
-        app:showAsAction="always|withText"/>
+        app:showAsAction="ifRoom"
+        />
 
-    <item android:id="@+id/action_settings" android:title="@string/action_settings"
-        android:orderInCategory="100" app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never"
+        />
 </menu>
