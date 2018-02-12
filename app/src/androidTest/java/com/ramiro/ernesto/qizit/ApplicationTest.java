@@ -40,6 +40,9 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<LoginActiv
         etext2 = (EditText) actividad.findViewById(R.id.password);
         mloginbutton = (Button) actividad.findViewById(R.id.loginbutton);
         msinguptext = (TextView) actividad.findViewById(R.id.signup_text);
+        // MainActivity actividad = getActivity();
+        // suma = (Button) actividad.findViewById(R.id.button1);
+
     }
 
     protected void tearDown() throws Exception {
@@ -49,7 +52,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<LoginActiv
     private static final String USERNAME = "ernesto";
     private static final String PASSWORD = "123456";
 
-    public void testAddValues() {
+    public void testLoginSignup() {
         TouchUtils.tapView(this, etext1);
         getInstrumentation().sendStringSync(USERNAME);
 //        // now on value2 entry
@@ -57,8 +60,12 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<LoginActiv
         getInstrumentation().sendStringSync(PASSWORD);
         // now on Add button
         TouchUtils.clickView(this, mloginbutton);
+//        mloginbutton.requestFocus();
+//        mloginbutton.performClick();
         // now on Sign up text
         TouchUtils.clickView(this, msinguptext);
+//        msinguptext.requestFocus();
+//        msinguptext.performClick();
 
         // get result
 //        String mathResult1 = etiqueta.getText().toString();

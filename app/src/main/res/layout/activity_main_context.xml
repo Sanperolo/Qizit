@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main_context"
     tools:context="com.ramiro.ernesto.qizit.MainContextActivity"
-    style="@style/MyViewok">
+    style="@style/MyViewok"
+    >
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
