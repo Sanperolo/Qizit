@@ -28,7 +28,12 @@
 
     <TextView
         android:id="@+id/subtitle"
-        style="@style/AuthSubtitle" />
+        style="@style/AuthTitle"
+        android:textSize="15sp"
+        android:layout_below="@id/title"
+        android:text="@string/subtitle_string"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="0dp" />
 
     <LinearLayout
         android:id="@+id/keysLayout"

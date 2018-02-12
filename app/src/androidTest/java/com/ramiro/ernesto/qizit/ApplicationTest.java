@@ -24,6 +24,7 @@ import android.widget.TextView;
 public class ApplicationTest extends ActivityInstrumentationTestCase2<LoginActivity> {
 
     private Button mloginbutton;
+    private TextView msinguptext;
     private EditText etext1;
     private EditText etext2;
     private LoginActivity actividad;
@@ -38,6 +39,7 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<LoginActiv
         etext1 = (EditText) actividad.findViewById(R.id.email);
         etext2 = (EditText) actividad.findViewById(R.id.password);
         mloginbutton = (Button) actividad.findViewById(R.id.loginbutton);
+        msinguptext = (TextView) actividad.findViewById(R.id.signup_text);
     }
 
     protected void tearDown() throws Exception {
@@ -55,6 +57,8 @@ public class ApplicationTest extends ActivityInstrumentationTestCase2<LoginActiv
         getInstrumentation().sendStringSync(PASSWORD);
         // now on Add button
         TouchUtils.clickView(this, mloginbutton);
+        // now on Sign up text
+        TouchUtils.clickView(this, msinguptext);
 
         // get result
 //        String mathResult1 = etiqueta.getText().toString();
