@@ -25,7 +25,7 @@ public class MainContextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_context);
 
-        Intent intent = new Intent(this,SplashActivity.class);
+        Intent intent = new Intent(this,LoginActivity.class);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);

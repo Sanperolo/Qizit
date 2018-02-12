@@ -26,7 +26,12 @@
 
     <TextView
         android:id="@+id/subtitle"
-        style="@style/AuthSubtitle" />
+        style="@style/AuthTitle"
+        android:textSize="15sp"
+        android:layout_below="@id/title"
+        android:text="@string/subtitle_string"
+        android:layout_alignParentTop="false"
+        android:layout_marginTop="0dp" />
 
     <LinearLayout
         android:id="@+id/keysLayout"
@@ -35,7 +40,12 @@
         <EditText
             android:id="@+id/usernamefield"
             android:hint="@string/username_hint"
-            style="@style/AuthEditText">
+            android:layout_alignParentLeft="true"
+            android:textSize="17sp"
+            android:textColorHint="@color/light_grey"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtitle"
+            android:layout_width="match_parent">
 
             <requestFocus/>
         </EditText>
@@ -44,8 +54,12 @@
             android:id="@+id/passwordfield"
             android:inputType="textPassword"
             android:hint="@string/password_hint"
-            style="@style/AuthEditText"
-            />
+            android:layout_alignParentLeft="true"
+            android:textSize="17sp"
+            android:textColorHint="@color/light_grey"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subtitle"
+            android:layout_width="match_parent" />
 
     </LinearLayout>
 

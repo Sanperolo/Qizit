@@ -6,15 +6,11 @@
     <item
         android:title="Camera"
         android:id="@+id/camera"
-        android:icon="@drawable/ic_menu_camera_white"
-        app:showAsAction="collapseActionView"
         />
 
     <item
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
-        android:orderInCategory="100"
-        app:showAsAction="never"
         />
 </menu>
 
