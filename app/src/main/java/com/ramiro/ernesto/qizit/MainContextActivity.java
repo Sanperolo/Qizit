@@ -28,7 +28,7 @@ public class MainContextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_context);
 
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, SplashActivity.class);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
@@ -46,12 +46,19 @@ public class MainContextActivity extends AppCompatActivity {
     }
 
 
-    //    construimos el Listener que lanza un Toast y desactiva a continuación del Swipe la animación
+    //    construimos el Swipe y aplicamos un Listener que lanza un SnackBar y desactiva a continuación del Swipe la animación
     protected SwipeRefreshLayout.OnRefreshListener mOnRefreshListener = new SwipeRefreshLayout.OnRefreshListener() {
         @Override
         public void onRefresh() {
-//            Toast toast0 = Toast.makeText(MainContextActivity.this, "going swipeREFRESH", Toast.LENGTH_LONG);
-//            toast0.show();
+
+//    opción TOAST
+//            
+//          Toast toast0 = Toast.makeText(MainContextActivity.this, "going swipeREFRESH", Toast.LENGTH_LONG);
+//          toast0.show();
+
+
+//   opción SNACKBAR
+
             final RelativeLayout mrelativeLayout = (RelativeLayout) findViewById(R.id.activity_main_context);
 
             Snackbar snackbar = Snackbar
@@ -88,9 +95,9 @@ public class MainContextActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
-        }
-        if (id == R.id.camera) {
+            Toast toast = Toast.makeText(this, "going Settings", Toast.LENGTH_LONG);
+            toast.show();
+        } else if (id == R.id.camera) {
             Toast toast = Toast.makeText(this, "going APPBaR CAMERA", Toast.LENGTH_LONG);
             toast.show();
         }
@@ -106,7 +113,6 @@ public class MainContextActivity extends AppCompatActivity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_context, menu);
 
-
     }
 
     //    creamos una lista de eventos para los items del menus contextual
@@ -117,14 +123,13 @@ public class MainContextActivity extends AppCompatActivity {
             case R.id.camera:
                 Toast toast = Toast.makeText(this, "going CONTEXT CAMERA", Toast.LENGTH_LONG);
                 toast.show();
-                return true;
+                break;
             case R.id.action_settings:
                 Toast toast2 = Toast.makeText(this, "going CONTEXT SETTINGS", Toast.LENGTH_LONG);
                 toast2.show();
-                return true;
-            default:
-                return super.onContextItemSelected(item);
+                break;
         }
+        return super.onContextItemSelected(item);
     }
 
 
