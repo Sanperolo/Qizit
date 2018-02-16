@@ -1,10 +1,14 @@
 package com.ramiro.ernesto.qizit;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.support.annotation.IdRes;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -15,9 +19,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import static android.R.attr.bitmap;
+//import static com.ramiro.ernesto.qizit.R.id.girlcontext;
+import static com.ramiro.ernesto.qizit.R.id.imageView;
 
 public class MainContextActivity extends AppCompatActivity {
 
@@ -28,7 +37,7 @@ public class MainContextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_context);
 
-        Intent intent = new Intent(this, SplashActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 //        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
@@ -37,6 +46,14 @@ public class MainContextActivity extends AppCompatActivity {
 //        cast a la vista a la que aplicamos un menu contextual y la registramos
         TextView mycontext = (TextView) findViewById(R.id.textView);
         registerForContextMenu(mycontext);
+
+//        ImageView mygirl = (ImageView) findViewById(R.id.girlcontext);
+//
+//        BitmapDrawable drawable = (BitmapDrawable) mygirl.getDrawable();
+//        Bitmap bitmap = drawable.getBitmap();
+//
+//        RoundedBitmapDrawable rounddrawable = RoundedBitmapDrawableFactory.create(getResources(), bitmap);
+//        rounddrawable.setCircular(true);
 
 
 //       cast al Layout SwipeRefresh con el que rodeamos la vista en el xml y le colocamos un listener
@@ -52,7 +69,7 @@ public class MainContextActivity extends AppCompatActivity {
         public void onRefresh() {
 
 //    opción TOAST
-//            
+//
 //          Toast toast0 = Toast.makeText(MainContextActivity.this, "going swipeREFRESH", Toast.LENGTH_LONG);
 //          toast0.show();
 

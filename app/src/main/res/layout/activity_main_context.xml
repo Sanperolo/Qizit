@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main_context"
     tools:context="com.ramiro.ernesto.qizit.MainContextActivity"
     style="@style/MyViewok"
+    android:background="@android:color/holo_orange_dark"
     >
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/hipman"
+        android:layout_centerHorizontal="true"
+        app:civ_border_color="#EEE"
+        app:civ_border_width="0dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        app:civ_shadow_color="#999"/>
+
 
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
@@ -18,6 +33,9 @@
             android:gravity="center"
             android:id="@+id/textView"
             android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+
             />
 
     </android.support.v4.widget.SwipeRefreshLayout>
